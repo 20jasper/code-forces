@@ -1,0 +1,39 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "ES2020",
+		"lib": [
+			"ES2020",
+			"dom"
+		],
+		"sourceMap": true,
+		"moduleResolution": "node",
+		// TS can be executed directly, .gitignore to avoid pushing, TS updates will be sent to dist folder. 
+		"outDir": "./dist/",
+		// Gives TS a starting point for transpiling
+		"rootDir": "src",
+		"resolveJsonModule": true,
+		// Compiled one-file-at-at-time (esbuild) so error on any incompatible patterns
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		// Not validating .d.ts files (e.g. node_modules) saves significant compile time
+		"skipLibCheck": true,
+		// Don't pull in any 'environment' types by default, except the ones listed here
+		"strict": true,
+		//  check nulls when accessing objects and arrays
+		"noUncheckedIndexedAccess": true,
+		"forceConsistentCasingInFileNames": true,
+		// for more standard class behavior
+		"useDefineForClassFields": true,
+		// allow js files to be imported in project
+		"allowJs": true,
+		// ensures switch statement includes break or return
+		"noFallthroughCasesInSwitch": true,
+	},
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
