@@ -1,3 +1,5 @@
+import createLineGenerator from '@helpers/createLineGenerator';
+
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
 
@@ -16,16 +18,10 @@ process.stdin.on('end', () => {
 	main(lineGenerator);
 });
 
-const createLineGenerator = function*(lines: string[]): Generator<string> {
-	for(const line of lines) {
-		yield line;
-	}
-};
-
 // End boilerplate
 
 function main(readLine: Generator<string>): void {
 
 }
 
-export {};
+export { main };

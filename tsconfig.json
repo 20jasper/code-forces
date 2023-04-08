@@ -28,6 +28,15 @@
 		"allowJs": true,
 		// ensures switch statement includes break or return
 		"noFallthroughCasesInSwitch": true,
+		"baseUrl": "src",
+		"paths": {
+			"@helpers/*": [
+				"helpers/*"
+			],
+			"@problems/*": [
+				"problems/*"
+			]
+		}
 	},
 	"include": [
 		"src/**/*"
