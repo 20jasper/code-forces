@@ -7,7 +7,8 @@
   "scripts": {
     "build": "npx tsc src/*",
     "bundle": "webpack --config ./webpack.config.js --entry=./src/problems/$FILE/$FILE.ts --output-filename=$FILE.js",
-    "start": "FILE=index npm run bundle && cp dist/index.js dist/index.cjs && node dist/index.cjs"
+    "start": "FILE=index npm run bundle && cp dist/index.js dist/index.cjs && node dist/index.cjs",
+    "template": "mkdir src/problems/$FILE && cp src/template/template.ts src/problems/$FILE/$FILE.ts && cp src/template/template.test.ts src/problems/$FILE/$FILE.test.ts"
   },
   "keywords": [],
   "author": "",
